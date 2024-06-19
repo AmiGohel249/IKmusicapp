@@ -1,0 +1,15 @@
+<!-- song.component.html -->
+<div class="song-card" (click)="toggleSongs()">
+  <div class="song-image">
+    <img [src]="imagePath" alt="{{ title }}">
+  </div>
+  <div class="song-info">
+    <h3>{{ title }}</h3>
+    <p>{{ artist }}</p>
+  </div>
+  <div *ngIf="showSongs">
+    <ul>
+      <li *ngFor="let song of songs">{{ song }}</li>
+    </ul>
+  </div>
+</div>
